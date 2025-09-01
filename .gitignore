@@ -1,14 +1,18 @@
-# data と outputs の中身は無視、ただし .gitkeep は許可
-data/*
+# --- data: 中身は無視するが、ディレクトリと .gitkeep は追跡 ---
+data/**
+!data/
+!data/**/
 !data/.gitkeep
-data/**/
 !data/**/.gitkeep
 
-outputs/*
+# --- outputs: 同様 ---
+outputs/**
+!outputs/
+!outputs/**/
 !outputs/.gitkeep
-outputs/**/
 !outputs/**/.gitkeep
 
+# そのほか定番
 models/
 *.ipynb_checkpoints/
 __pycache__/
